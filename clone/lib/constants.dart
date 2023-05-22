@@ -2,17 +2,18 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:tiktok_tutorial/controllers/auth_controller.dart';
-import 'package:tiktok_tutorial/views/screens/add_video_screen.dart';
-import 'package:tiktok_tutorial/views/screens/profile_screen.dart';
-import 'package:tiktok_tutorial/views/screens/search_screen.dart';
-import 'package:tiktok_tutorial/views/screens/video_screen.dart';
+import 'package:youtube_clone/controllers/auth_controller.dart';
+import 'package:youtube_clone/views/screens/add_video_screen.dart';
+import 'package:youtube_clone/views/screens/profile_screen.dart';
+import 'package:youtube_clone/views/screens/search_screen.dart';
+import 'package:youtube_clone/views/screens/video_screen.dart';
+import 'package:youtube_clone/youtube_screen/screens/home_page.dart';
 
 List pages = [
-  VideoScreen(),
+  HomePageScreen(),
   SearchScreen(),
   const AddVideoScreen(),
-  Text('Messages Screen'),
+  const SafeArea(child: Center(child: Text('Messages Screen'))),
   ProfileScreen(uid: authController.user.uid),
 ];
 
